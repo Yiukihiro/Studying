@@ -1,11 +1,18 @@
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PhasesList {
-    public List<String> phases(){
-        List<String> phases = new LinkedList<>() {
-            
-        };
-        return phases;
+    Integer Index;
+
+    PhasesList(Integer index){
+        this.Index = index;
+    }
+
+    public void phrases(){
+        Map<Integer, String> phrases = new HashMap<Integer, String>();
+        phrases.put(0 , "Не хочешь, не надо");
+        phrases.put(1 , "О чем поговорим?");
+        System.out.println(phrases.get(Index));
     };
+
 }
