@@ -1,12 +1,18 @@
 class Solution {
-    public int[] twoSum(int[] nums, int target) {
+    public int majorityElement(int[] nums) {
+        int value = -1;
+        int checkRank = 0;
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
+            if (checkRank == 0) {
+                value = nums[i];
+                checkRank = 1;
+            } else if (value == nums[i]) {
+                checkRank++;
+                if (checkRank > (nums.length / 2)) {
+                    return value;
                 }
-            }
+            } else checkRank--;
         }
-        return null;
+        return value;
     }
 }
