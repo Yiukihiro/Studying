@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,11 +9,10 @@ class Solution {
             map.put(c, map.getOrDefault(c, 0) + 1);
             if (map.get(c) % 2 == 1) {
                 count++;
-            } else
-                count--;
+            } else count--;
         }
-            if (count > 1)
-                return s.length() - count + 1;
+        if (count > 1)
+            return s.length() - count + 1;
         return s.length();
     }
 }
