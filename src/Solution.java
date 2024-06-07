@@ -1,11 +1,20 @@
-import java.util.Arrays;
+
+import java.util.HashMap;
+import java.util.Map;
 
 class Solution {
     public int longestPalindrome(String s) {
-        char[] chars = s.toLowerCase().toCharArray();
-        int n = chars.length;
-        System.out.println(chars);
-
-        return n;
+        int count = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+            if (map.get(c) % 2 == 1) {
+                count++;
+            } else
+                count--;
+        }
+            if (count > 1)
+                return s.length() - count + 1;
+        return s.length();
     }
 }
