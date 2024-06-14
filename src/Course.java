@@ -1,5 +1,3 @@
-import org.w3c.dom.css.CSSImportRule;
-
 public class Course {
 
     private int id;
@@ -15,6 +13,6 @@ public class Course {
     }
 
     public boolean equals(Object object) {
-        return object instanceof Course && id == ((Course) object).id;
+        return id == ((Course) object).id;
     }
 }

@@ -1,4 +1,5 @@
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -8,5 +9,15 @@ public class Main {
         Course secondCourse = new Course(2, "Second Course");
         secondCourse.display();
             System.out.println(firstCourse.equals(secondCourse));
+
+            List<Course> courses = new ArrayList<>();
+            courses.add(firstCourse);
+            courses.add(secondCourse);
+            PrintCourse(courses);
+    }
+    public static void PrintCourse(List<Course> courses) {
+        for (Course course : courses) {
+            course.display();
+        };
     }
 }
