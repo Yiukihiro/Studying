@@ -1,7 +1,6 @@
-public class Car extends Vehicle implements Fuelable{
+public class Bicycle extends Vehicle {
 
-
-    Car(String name){
+    Bicycle(String name){
         super(name);
     }
 
@@ -15,8 +14,4 @@ public class Car extends Vehicle implements Fuelable{
         System.out.println(name + " " + "stopped");
     }
 
-    @Override
-    public void refuel() {
-        System.out.println(name + " " + "refuel");
-    }
 }

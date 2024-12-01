@@ -1,18 +1,17 @@
-public class Car extends Vehicle implements Fuelable{
+public class Airplane extends Vehicle implements Fuelable{
 
-
-    Car(String name){
+    Airplane(String name){
         super(name);
     }
 
     @Override
     public void move() {
-        System.out.println(name + " " + "drive");
+        System.out.println(name + " " + "flying");
     }
 
     @Override
     public void stop() {
-        System.out.println(name + " " + "stopped");
+        System.out.println(name + " " + "landing");
     }
 
     @Override

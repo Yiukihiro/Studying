@@ -1,23 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args)  {
-        Course firstCourse = new Course(1, "First Course");
-        firstCourse.display();
-        Course secondCourse = new Course(2, "Second Course");
-        secondCourse.display();
-            System.out.println(firstCourse.equals(secondCourse));
+    public static void main(String[] args) {
+        Car audi = new Car("Audi");
+        audi.refuel();
+        audi.start();
+        audi.move();
+        audi.stop();
 
-            List<Course> courses = new ArrayList<>();
-            courses.add(firstCourse);
-            courses.add(secondCourse);
-            PrintCourse(courses);
-    }
-    public static void PrintCourse(List<Course> courses) {
-        for (Course course : courses) {
-            course.display();
-        };
+        Airplane boeing = new Airplane("Boeing");
+        boeing.refuel();
+        boeing.start();
+        boeing.move();
+        boeing.refuel();
+
+        Bicycle bmx = new Bicycle("BMX");
+        bmx.start();
+        bmx.move();
+        bmx.stop();
+
     }
 }
