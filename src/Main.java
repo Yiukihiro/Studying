@@ -1,23 +1,22 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        Car audi = new Car("Audi");
-        audi.refuel();
-        audi.start();
-        audi.move();
-        audi.stop();
+        List<Behavior> animals = new ArrayList<>();
+        animals.add(new Dog("Rex", 3));
+        animals.add(new Cat("Barsik", 4));
+        animals.add(new Parrot("Kesha", 1));
 
-        Airplane boeing = new Airplane("Boeing");
-        boeing.refuel();
-        boeing.start();
-        boeing.move();
-        boeing.refuel();
-
-        Bicycle bmx = new Bicycle("BMX");
-        bmx.start();
-        bmx.move();
-        bmx.stop();
-
+        for (Animal animal : animals) {
+            if (animal instanceof Behavior) {
+                ((Behavior) animal).info(); // Вывод информации
+            }
+            animal.eat();
+            animal.sleep();
+            animal.makeNoise();
+            System.out.println();
+        }
     }
 }
